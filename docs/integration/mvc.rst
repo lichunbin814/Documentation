@@ -1,23 +1,18 @@
+===
 MVC
 ===
-Autofac總是會支援最新版本的ASP .NET MVC，所以文件也會保持在最新的狀態。一般來說，每次版本的升級都能保有穩定性。
 
+Autofac is always kept up to date to support the latest version of ASP.NET MVC, so documentation is also kept up with the latest. Generally speaking, the integration remains fairly consistent across versions.
 
+MVC integration requires the `Autofac.Mvc5 NuGet package <http://www.nuget.org/packages/Autofac.Mvc5/>`_.
 
-MVC的整合可以使用下列的Nuget
- * [Autofac.Mvc5 NuGet package](http://www.nuget.org/packages/Autofac.Mvc5/)
+MVC integration provides dependency injection integration for controllers, model binders, action filters, and views. It also adds :doc:`per-request lifetime support <../faq/per-request-scope>`.
 
-Autfofac.Mvc5 可使用的相依性注入：
- * Conroller
- * model binders
- * action filter
- * views
- * [per-request lifetime support](../faq/per-request-scope)
+.. contents::
+  :local:
 
-快速開始
+Quick Start
 ===========
-若要透過Autofac整合MVC，你必須透過上述的Nuget整合套件去註冊你的Controller，並設定依賴解晰
-
 To get Autofac integrated with MVC you need to reference the MVC integration NuGet package, register your controllers, and set the dependency resolver. You can optionally enable other features as well.
 
 .. sourcecode:: csharp
